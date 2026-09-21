@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Moedas</title>
+</head>
+
+<body>
+
+    <h1>Conversor de Moedas</h1>
+
+    <label for="valor">Valor:</label>
+    <input type="number" id="valor" placeholder="Digite um valor">
+
+    <br><br>
+
+    <label for="origem">Moeda de origem:</label>
+    <select id="origem">
+        <option value="real">Real (R$)</option>
+        <option value="dolar">Dólar (US$)</option>
+        <option value="euro">Euro (€)</option>
+        <option value="peso">Peso ($)</option>
+    </select>
+
+    <br><br>
+
+    <label for="destino">Moeda de destino:</label>
+    <select id="destino">
+        <option value="real">Real (R$)</option>
+        <option value="dolar">Dólar (US$)</option>
+        <option value="euro">Euro (€)</option>
+        <option value="peso">Peso ($)</option>
+    </select>
+
+    <br><br>
+
+    <button id="converter">Converter</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        const valorInput = document.getElementById("valor");
+        const origemSelect = document.getElementById("origem");
+        const destinoSelect = document.getElementById("destino");
+        const botao = document.getElementById("converter");
+        const resultado = document.getElementById("resultado");
+
+        botao.addEventListener("click", function () {
+
+            if (valorInput.value === "") {
+                resultado.textContent = "Digite um valor para converter.";
+                return;
+            }
+
+            const valor = Number(valorInput.value);
+            const origem = origemSelect.value;
+            const destino = destinoSelect.value;
+
+            let valorEmReais;
+
+            if (origem === "real") {
+                valorEmReais = valor;
+
+            } else if (origem === "dolar") {
+                valorEmReais = valor * 5.40;
+
+            } else if (origem === "euro") {
+                valorEmReais = valor * 6.30;
+
+            } else {
+                valorEmReais = valor * 0.03;
+            }
+
+            let convertido;
+
+            if (destino === "real") {
+                convertido = valorEmReais;
+
+            } else if (destino === "dolar") {
+                convertido = valorEmReais / 5.40;
+
+            } else if (destino === "euro") {
+                convertido = valorEmReais / 6.30;
+
+            } else {
+                convertido = valorEmReais / 0.03;
+            }
+
+            resultado.textContent =
+                `Resultado: ${convertido.toFixed(2)} ${destino.toUpperCase()}`;
+        });
+    </script>
+
+</body>
+
+</html>
