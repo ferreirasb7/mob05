@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    
+
+<head>
+    <meta charset="UTF-8">
+    <title>H.I</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        button {
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 10px 20px;
+        }
+
+        input {
+            display: flexbox;
+            border-radius: 10px;
+            padding: 8px 60px
+        }
+
+        img {
+            display: flex;
+        }
+  
+        
+    </style>
+</head>
+
+<body>
+    <h1>Loja Eletro</h1>
+
+    <h3>Esse site e de uma loja eletronica, vendemos produtos 100% eletricos com o melhor preço da cidade. </h3>
+
+    <img src="data:image/webp;base64,UklGRhQFAABXRUJQVlA4IAgFAADQLQCdASq1APEAPj0ci0QiIaKUqXUIKAPEtLdfOAcBWWe/T163Fvtmp7XrO+DpMAGQwMEU2MdTZZjqSCZp1Pml4fZoGucCoDpFUt/sOU3cdeab5Drj650fhAs2cMw8L4shYa6a8pduJ7AOxGaIhlPmxJt4UjUn0VCfGkLVIgkqOS0KzE+5BPBwe/alb0p6LtjmX4zUXLJnTBDa1nXbYrBI9gJVtafg5P7C8UBq75Zlw/A5+00+DRz6zrvOo9kQU3xITnFEHVsJknSxZg8mjl0JaP0k3Qe2NvCkal5OfOsSY8JrwBdy5Hgxkz85VEwZ3T0bY30SF4H7NGv+7pjdVX1BYoM6lwV6FQp1+KPLbcqiYNHGUBf9rGgr8s3XpAkhRByuOcW4hsA4neRsb6Bkqhw6kDHx1Z1wsZaWCrquAWq+WwNKcdlYKGt3BoF/EbhrKVHzdF2QvqN5iU1/EsG19xjg38nr4fIe2PHNRfV0atyqptpHr4ep0AAA/v9wuhRWf7Dpv/wa/pXaIoG3VFiiWH5w/CIyRIfdEpJmRnKW59lo6ymV06AitQJ3rNnVmP20WKnfC9PXEItDB6BylCuF/YIHT2viR+yxPWERYNN45dmu0m5liUU6Xx12F02s0eXJIntcwXD59TQ8uxnn5X8jpyqYxv74SXePU3pxxmaUydQM+tOyHMjSld4E+XmTPfeTn0a50d/kVnMX/CQ4QNZkNtREvntQysFY2Z6IBtlwAb3yTJTmFog1BgBJ7n7jwQ0ZJIIgsY2FkkdeO/KKRzFVH6wDZGRL5rYR0N4PpIbYXOVafDy2/kcdjQHF710+74WY5NdEL/J9Peknr81icGk0BYKuIij/mb8GNf8+Br8/66XYnWU5mUXW4pLeMWFXlYhT9ZHh+/v3fs2KDi58UdjuhXvGgSP+yBTY3DZkW0Vnl0zn7YIPeWGeJxo0A/QeJtlFL2xx6R+ZKiJVUF+xD6B7I29KDmdwxyvtij9kXssyV7qzurQ2j5C5lgsTe766w5nEdwhD7Q+gRpE7ABzIR7p3xA144T1iJqEI4Dd/Mbb1pdspy22v33kzUBs6LdSbnzko45NnrQ8PeKUUG80N+XvoNEX0uxf6RauT/ptZtA1G3wNy0Ki6Jb6Ml5zFOyT2NogizEf8GjNx36PLeAbBLRqbYe1UD2p7yBYLs49uLVTGvsoevcN8YYHYlqktvkWuyLkYWSRoBGD5LvF5TjVCaTBVo5kYvE5E4yr+RRxmaQvCSzF+hCe4Z+r9Lftq26jQw99faDMDhWccHJjDrg0UpudIvDKuCyS33PRdki4oRLJMOS6i1XBIiJUWHO9IH07IFE3OZFDclgLp2yJqoX/qgb2dsK/99elKe5syZk2AZ+lI3LqcluKU6eMIekveZEXC5AQkIxQ0GairJxVInI3SiO5mned2DIQjbd7DvfzaKPltXFgyA769RTyca2V2qvbahvTeMkvZbkkdEAS4XHN7xTMvUT9jHwUmk/TqbLVQ/+944LtKNQoTeC/qt/q9ZVCv/a741sJ3vMFWfzuOoXBf/FAK8+tZav3XOzSmSF1iF1sE3PtP3YCsEw21+OI+YOkbi5DK4UMchXiElvXJtfj034mpG+H67+8/v8tSRuOZHQQMiledYpw3/SeTYX4g6XuVy9/9syvNLxAhWF02PKYdCzQlaDW3TO/FkGbheAZvaphBg/a/5E4TOBIKoAAA" alt="W3Schools.com">
+
+    <input type="text" id="nomeCliente" placeholder="Nome para Login">
+
+    <button onclick="confirmarinscricao()">Confirmar</button>
+
+    <p id="mensagem"></p>
+
+    <script>
+        function confirmarinscricao() {
+            let nome = document.getElementById("nomeCliente").value;
+
+            document.getElementById("mensagem").innerText =
+                "Login confirmada para: " + nome + "!";
+        }
+    </script>
+</body>
+
+</html>
